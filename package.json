@@ -1,8 +1,8 @@
 {
   "name": "daily-report",
-  "displayName": "周报提醒",
-  "description": "周报提醒插件！Remind you report your work every week!",
-  "version": "1.0.0",
+  "displayName": "daily-report",
+  "description": "周报(日报)提醒插件！Remind you report your work every week or every day!",
+  "version": "1.0.2",
   "publisher": "xiaofeihe",
   "icon": "logo.png",
   "engines": {
@@ -13,16 +13,19 @@
   ],
   "keywords": [
     "周报",
-    "report"
+    "日报",
+    "report",
+    "week",
+    "day"
   ],
   "bugs": {
-    "url": "https://xiaofeihe.coding.net/p/vscode-report/d/vscode-report/git",
+    "url": "https://github.com/XiaoFeiHe1993/vscode-report/issues",
     "email": "1712776213@qq.com"
   },
-  "homepage": "https://xiaofeihe.coding.net/p/vscode-report/d/vscode-report/git",
+  "homepage": "https://github.com/XiaoFeiHe1993/vscode-report",
   "repository": {
     "type": "git",
-    "url": "https://e.coding.net/xiaofeihe/vscode-report.git"
+    "url": "https://github.com/XiaoFeiHe1993/vscode-report.git"
   },
   "activationEvents": [
     "onCommand:report.showReminderView",
@@ -57,6 +60,21 @@
             "http://images.xuejuzi.cn/1905/1_190501101421_1.jpg"
           ],
           "description": "用户设置图片地址"
+        },
+        "report.reminderViewDay": {
+          "type": "boolean",
+          "default": false,
+          "description": "是否是日报"
+        },
+        "report.reminderViewWeek": {
+          "type": "number",
+          "default": 5,
+          "description": "每周几出现提示"
+        },
+        "report.reminderViewHour": {
+          "type": "number",
+          "default": 17,
+          "description": "几点出现提醒"
         }
       }
     }

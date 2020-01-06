@@ -14,6 +14,10 @@ export class Scheduler {
   }
 
   public startReminderView() {
+    const configDay = Utility.getConfiguration().get<boolean>(
+      "reminderViewDay",
+      false
+    );
     const currentWeek = new Date().getDay();
     const configWeek = Utility.getConfiguration().get<number>(
       "reminderViewWeek",
@@ -24,7 +28,10 @@ export class Scheduler {
       "reminderViewHour",
       17
     );
-    if (configWeek === currentWeek && configHour === currentHour) {
+    if (
+      (configDay || configWeek === currentWeek) &&
+      configHour === currentHour
+    ) {
       ReminderView.show(this.context);
     }
   }

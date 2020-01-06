@@ -1,10 +1,10 @@
 # 周报提醒插件
 
-每周五下班前会有插件提醒你写周报。
+每周五下班前或自定义时间会有插件提醒你写周报(日报)。
 
 ## 使用
 
-除了每周五会自动弹出提醒页面，也可以按 `F1`, 然后输入 `report:打开周报提醒`来打开提醒页面
+除了每周五或自定义时间会自动弹出提醒页面，也可以按 `F1`, 然后输入 `report:打开周报提醒`来打开提醒页面
 
 ![usage](images/usage.png)
 
@@ -13,6 +13,9 @@
 - `report.title`: 提示文字。 (默认值为**快下班了，亲，该写周报啦~**)
 - `report.type`: default (默认图)；url (图片地址)。(默认值为**default**)
 - `report.customImages`: 配置图片数组（需要搭配 report.type 为 url） (默认值为**默认图片**)
+- `report.reminderViewDay`: 是否是日报，默认false
+- `report.reminderViewWeek`: 周几出现周报提醒，默认周五
+- `report.reminderViewHour`: 几点出现日报、周报提醒，默认17点
 
 ```
 如下例子，使用自定义图片：

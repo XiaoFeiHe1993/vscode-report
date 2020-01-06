@@ -1,6 +1,7 @@
 "use strict";
 import * as vscode from "vscode";
 import Asset from "./asset";
+import { Utility } from "./utility";
 
 export class ReminderView {
   private static panel: vscode.WebviewPanel | undefined;
@@ -9,22 +10,38 @@ export class ReminderView {
     let asset: Asset = new Asset(context);
 
     const imagePath = asset.getImageUri();
-    const title = asset.getTitle();
+    let title = asset.getTitle();
+    const configDay = Utility.getConfiguration().get<boolean>(
+      "reminderViewDay",
+      false
+    );
+    const documentTitle = configDay ? "日报提醒" : "周报提醒";
+    if (configDay) {
+      title = title.replace('周报', '日报');
+    }
 
     if (this.panel) {
-      this.panel.webview.html = this.generateHtml(imagePath, title);
+      this.panel.webview.html = this.generateHtml(
+        imagePath,
+        title,
+        documentTitle
+      );
       this.panel.reveal();
     } else {
       this.panel = vscode.window.createWebviewPanel(
         "resport",
-        "周报提醒",
+        documentTitle,
         vscode.ViewColumn.Two,
         {
           enableScripts: true,
           retainContextWhenHidden: true
         }
       );
-      this.panel.webview.html = this.generateHtml(imagePath, title);
+      this.panel.webview.html = this.generateHtml(
+        imagePath,
+        title,
+        documentTitle
+      );
       this.panel.onDidDispose(() => {
         this.panel = undefined;
       });
@@ -33,14 +50,15 @@ export class ReminderView {
 
   protected static generateHtml(
     imagePath: vscode.Uri | string,
-    title: string
+    title: string,
+    documentTitle: string
   ): string {
     let html = `<!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>周报提醒</title>
+            <title>${documentTitle}</title>
         </head>
         <body>
             <div><h1>${title}</h1></div>
