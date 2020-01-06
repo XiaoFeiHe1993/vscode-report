@@ -2,11 +2,15 @@
 
 每周五下班前或自定义时间会有插件提醒你写周报(日报)。
 
+Every Friday before leaving work or at a custom time, it will remind you to write a weekly newspaper (daily newspaper).
+
 ## 使用
 
 除了每周五或自定义时间会自动弹出提醒页面，也可以按 `F1`, 然后输入 `report:打开周报提醒`来打开提醒页面
 
-![usage](images/usage.png)
+In addition to automatically popping up the reminder page every Friday or at a custom time, you can also press `F1` and enter `report:打开周报提醒` to open the reminder page.
+
+![usage](/images/usage.png)
 
 ## 配置
 

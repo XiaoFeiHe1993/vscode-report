@@ -2,7 +2,7 @@
   "name": "daily-report",
   "displayName": "daily-report",
   "description": "周报(日报)提醒插件！Remind you report your work every week or every day!",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "xiaofeihe",
   "icon": "logo.png",
   "engines": {
