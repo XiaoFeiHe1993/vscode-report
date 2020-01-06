@@ -1,7 +1,7 @@
 {
   "name": "daily-report",
-  "displayName": "日报、周报提醒",
-  "description": "日报、周报提醒插件。Daily and Weekly reminder plugin",
+  "displayName": "周报提醒",
+  "description": "周报提醒插件。Every week reminder report plugin",
   "version": "1.0.0",
   "publisher": "xiaofeihe",
   "icon": "logo.png",
@@ -12,19 +12,17 @@
     "Other"
   ],
   "keywords": [
-    "日报",
     "周报",
-    "report",
-    "newspaper"
+    "report"
   ],
   "bugs": {
-    "url": "https://github.com/formulahendry/vscode-ycy/issues",
+    "url": "https://xiaofeihe.coding.net/p/vscode-report/d/vscode-report/git",
     "email": "1712776213@qq.com"
   },
-  "homepage": "https://github.com/formulahendry/vscode-ycy/blob/master/README.md",
+  "homepage": "https://xiaofeihe.coding.net/p/vscode-report/d/vscode-report/git",
   "repository": {
     "type": "git",
-    "url": "https://github.com/formulahendry/vscode-ycy.git"
+    "url": "https://e.coding.net/xiaofeihe/vscode-report.git"
   },
   "activationEvents": [
     "onCommand:report.showReminderView",
@@ -45,7 +43,7 @@
       "properties": {
         "report.title": {
           "type": "string",
-          "default": "该写周报啦~",
+          "default": "快下班了，亲，该写周报啦~",
           "description": "页面内展示文字"
         },
         "report.type": {
@@ -56,7 +54,7 @@
         "report.customImages": {
           "type": "array",
           "default": [
-            "http://b-ssl.duitang.com/uploads/item/201806/04/20180604090459_gqqjo.jpg"
+            "http://images.xuejuzi.cn/1905/1_190501101421_1.jpg"
           ],
           "description": "用户设置图片地址"
         }

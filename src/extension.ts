@@ -8,7 +8,7 @@ export function activate(context: vscode.ExtensionContext) {
   scheduler.start();
 
   context.subscriptions.push(
-    vscode.commands.registerCommand("resport.showReminderView", () => {
+    vscode.commands.registerCommand("report.showReminderView", () => {
       ReminderView.show(context);
     })
   );
