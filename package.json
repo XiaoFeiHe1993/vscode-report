@@ -1,7 +1,7 @@
 {
   "name": "daily-report",
   "displayName": "周报提醒",
-  "description": "周报提醒插件。Every week reminder report plugin",
+  "description": "周报提醒插件！Remind you report your work every week!",
   "version": "1.0.0",
   "publisher": "xiaofeihe",
   "icon": "logo.png",
