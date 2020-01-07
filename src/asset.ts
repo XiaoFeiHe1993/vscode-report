@@ -75,7 +75,8 @@ export default class Asset {
   }
 
   public static getReminderViewWeek(): number {
-    return Utility.getConfiguration().get<number>("reminderViewWeek", 5);
+    const week = Utility.getConfiguration().get<number>("reminderViewWeek", 5);
+    return week === 7 ? 0 : week;
   }
 
   public static getReminderViewHour(): number {
