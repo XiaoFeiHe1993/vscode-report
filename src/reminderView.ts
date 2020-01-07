@@ -1,7 +1,5 @@
-"use strict";
 import * as vscode from "vscode";
 import Asset from "./asset";
-import { Utility } from "./utility";
 
 export class ReminderView {
   private static panel: vscode.WebviewPanel | undefined;
@@ -11,13 +9,10 @@ export class ReminderView {
 
     const imagePath = asset.getImageUri();
     let title = asset.getTitle();
-    const configDay = Utility.getConfiguration().get<boolean>(
-      "reminderViewDay",
-      false
-    );
+    const configDay = Asset.getReminderViewDay();
     const documentTitle = configDay ? "日报提醒" : "周报提醒";
     if (configDay) {
-      title = title.replace('周报', '日报');
+      title = title.replace("周报", "日报");
     }
 
     if (this.panel) {

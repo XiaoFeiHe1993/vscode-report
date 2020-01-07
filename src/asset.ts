@@ -69,4 +69,16 @@ export default class Asset {
   public getTitle(): string {
     return Utility.getConfiguration().get<string>("title", "");
   }
+
+  public static getReminderViewDay(): boolean {
+    return Utility.getConfiguration().get<boolean>("reminderViewDay", false);
+  }
+
+  public static getReminderViewWeek(): number {
+    return Utility.getConfiguration().get<number>("reminderViewWeek", 5);
+  }
+
+  public static getReminderViewHour(): number {
+    return Utility.getConfiguration().get<number>("reminderViewHour", 17);
+  }
 }

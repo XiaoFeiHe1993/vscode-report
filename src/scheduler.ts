@@ -1,7 +1,6 @@
-"use strict";
 import * as vscode from "vscode";
 import { ReminderView } from "./reminderView";
-import { Utility } from "./utility";
+import Asset from "./asset";
 
 export class Scheduler {
   public constructor(private context: vscode.ExtensionContext) {}
@@ -14,20 +13,11 @@ export class Scheduler {
   }
 
   public startReminderView() {
-    const configDay = Utility.getConfiguration().get<boolean>(
-      "reminderViewDay",
-      false
-    );
+    const configDay = Asset.getReminderViewDay();
     const currentWeek = new Date().getDay();
-    const configWeek = Utility.getConfiguration().get<number>(
-      "reminderViewWeek",
-      5
-    );
+    const configWeek = Asset.getReminderViewWeek();
     const currentHour = new Date().getHours();
-    const configHour = Utility.getConfiguration().get<number>(
-      "reminderViewHour",
-      17
-    );
+    const configHour = Asset.getReminderViewHour();
     if (
       (configDay || configWeek === currentWeek) &&
       configHour === currentHour

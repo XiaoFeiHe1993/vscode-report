@@ -1,4 +1,4 @@
-# 周报提醒插件
+# 周报(日报)提醒插件
 
 每周五下班前或自定义时间会有插件提醒你写周报(日报)。
 
@@ -10,7 +10,7 @@ Every Friday before leaving work or at a custom time, it will remind you to writ
 
 In addition to automatically popping up the reminder page every Friday or at a custom time, you can also press `F1` and enter `report:打开周报提醒` to open the reminder page.
 
-![usage](/images/usage.png)
+![usage](images/usage.png)
 
 ## 配置
 
