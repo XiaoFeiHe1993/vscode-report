@@ -21,6 +21,8 @@ In addition to automatically popping up the reminder page every Friday or at a c
 - `report.reminderViewWeek`: 周几出现周报提醒，默认周五
 - `report.reminderViewHour`: 几点出现日报、周报提醒，默认17点
 
+
+
 - `report.title`: prompt text(default value: **快下班了，亲，该写周报啦~**)
 - `report.type`: default (default image), url (image urls)。(default value: **default**)
 - `report.customImages`: configure an array of images(need **report.type** 为 **url**)(default value: **默认图片**)
