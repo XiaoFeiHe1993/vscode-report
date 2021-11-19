@@ -1,6 +1,6 @@
-# 周报(日报)提醒插件
+# 周报(日报、打卡)提醒插件
 
-每周五下班前或自定义时间会有插件提醒你写周报(日报)。
+每周五下班前或自定义时间会有插件提醒你写周报(日报、上班打卡)。
 
 Every Friday before leaving work or at a custom time, it will remind you to write a weekly newspaper (daily newspaper).
 
@@ -19,16 +19,7 @@ In addition to automatically popping up the reminder page every Friday or at a c
 - `report.customImages`: 配置图片数组（需要搭配 report.type 为 url） (默认值为**默认图片**)
 - `report.reminderViewDay`: 是否是日报，默认false
 - `report.reminderViewWeek`: 周几出现周报提醒，默认周五
-- `report.reminderViewHour`: 几点出现日报、周报提醒，默认17点
-
-
-
-- `report.title`: prompt text(default value: **快下班了，亲，该写周报啦~**)
-- `report.type`: default (default image), url (image urls)。(default value: **default**)
-- `report.customImages`: configure an array of images(need **report.type** 为 **url**)(default value: **默认图片**)
-- `report.reminderViewDay`: Is it a daily report(default value: **false**)
-- `report.reminderViewWeek`: What day remind you to write weekly report(default value: **Friday**)
-- `report.reminderViewHour`: What time remind you to write daily and weekly report(default value: **17 hours**)
+- `report.reminderViewHour`: 几点出现日报、周报提醒，默认17点。配置为数组，则一天出现多次提醒。
 
 ```
 如下例子，使用自定义图片：

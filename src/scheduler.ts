@@ -18,11 +18,14 @@ export class Scheduler {
     const configWeek = Asset.getReminderViewWeek();
     const currentHour = new Date().getHours();
     const configHour = Asset.getReminderViewHour();
-    if (
-      (configDay || configWeek === currentWeek) &&
-      configHour === currentHour
-    ) {
-      ReminderView.show(this.context);
+    if (Array.isArray(configHour)) {
+      if ((configDay || configWeek === currentWeek) && configHour.indexOf(currentHour) > -1) {
+        ReminderView.show(this.context);
+      }
+    } else {
+      if ((configDay || configWeek === currentWeek) && configHour === currentHour) {
+        ReminderView.show(this.context);
+      }
     }
   }
 }
